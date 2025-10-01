@@ -2,7 +2,7 @@
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { createConfig, http, WagmiProvider } from 'wagmi';
-import { base, mainnet } from 'wagmi/chains';
+import { mainnet } from 'wagmi/chains';
 import { connectorsForWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import {
   coinbaseWallet,
@@ -33,9 +33,9 @@ const connectors = connectorsForWallets(
   {
     projectId: process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID ?? 'dummy-id',
     walletConnectParameters: {},
-    appName: 'Base.org',
+    appName: '',
     appDescription: '',
-    appUrl: 'https://www.base.org/',
+    appUrl: '',
     appIcon: '',
   },
 );
